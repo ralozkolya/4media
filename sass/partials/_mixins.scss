@@ -1,0 +1,11 @@
+@mixin gradient-border($start: $light-green, $end: $dark-green, $width: 2px) {
+	border-width: $width;
+	border-style: solid;
+	border-color: $start;
+	border-image: linear-gradient(to bottom, $start, $end);
+	border-image-slice: 33%;
+}
+
+@mixin gradient-background($start: $light-green, $end: $dark-green) {
+	background-image: linear-gradient(to bottom, $start, $end);
+}
