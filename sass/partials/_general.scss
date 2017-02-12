@@ -1,6 +1,7 @@
 body {
 	@include bpg-nino();
 	background: url('../img/bg.jpg');
+	overflow-x: hidden;
 }
 
 img {
@@ -9,6 +10,10 @@ img {
 
 
 /* GENERAL */
+
+.wrapper {
+	transition: .5s transform;
+}
 
 .slide {
 	position: relative;
@@ -34,6 +39,10 @@ img {
 	&:hover, &:focus {
 		@include gradient-background();
 	}
+}
+
+.shifted {
+	transform: translateX(300px);
 }
 
 
