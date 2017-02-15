@@ -19,8 +19,8 @@ function set_language($_lang = NULL) {
 		$cookie->expire = 0;
 	}
 
-	if($lang !== EN && $lang !== GE && $lang !== RU) {
-		if($cookie->value === EN || $cookie->value === GE || $cookie->value === RU) {
+	if($lang !== EN && $lang !== GE) {
+		if($cookie->value === EN || $cookie->value === GE) {
 			$lang = $cookie->value;
 		}
 
@@ -60,7 +60,7 @@ function lang_link($lang) {
 
 	$uri = $ci->uri->uri_string();
 
-	$link = preg_replace('/'.GE.'|'.EN.'|'.RU.'/', $lang, $uri, 1);
+	$link = preg_replace('/'.GE.'|'.EN.'/', $lang, $uri, 1);
 
 	if(!$link) $link = $lang;
 
@@ -78,6 +78,5 @@ function get_lang_code($lang) {
 	switch($lang) {
 		case EN: return 'en';
 		case GE: return 'ka';
-		case RU: return 'ru';
 	}
 }
