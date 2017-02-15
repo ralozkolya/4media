@@ -1,5 +1,7 @@
 $(function() {
-	$('.projects-pagination-arrow').click(function() {
+	$('.projects-pagination-arrow').click(function(e) {
+
+		e.preventDefault();
 
 		var offset = $('.projects').scrollLeft();
 

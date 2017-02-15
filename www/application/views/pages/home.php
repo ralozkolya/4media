@@ -81,11 +81,12 @@
 				<?php } ?>
 			</div>
 			<div class="projects-pagination">
-				<span class="projects-pagination-arrow left">
+				<a class="unstyled projects-pagination-arrow left" href="#">
 					<span class="fa fa-chevron-left"></span>
-				</span><span class="projects-pagination-arrow right"><!-- Sorry about that, but no whitespace -->
+				</a>
+				<a class="unstyled projects-pagination-arrow right" href="#">
 					<span class="fa fa-chevron-right"></span>
-				</span>
+				</a>
 			</div>
 		</div>
 		<div class="slide">
