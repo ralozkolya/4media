@@ -8,6 +8,8 @@ $lang['adwords'] = 'Adwords/adsense';
 $lang['blog'] = 'Blog';
 $lang['searching_for_other'] = "If you're looking for other";
 
+$lang['websites'] = 'websites';
+
 $lang['our_team'] = 'Our team';
 $lang['portfolio'] = 'Portfolio';
 $lang['what_are_you_waiting_for'] = 'What are you waiting for';

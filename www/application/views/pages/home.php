@@ -3,12 +3,13 @@
 <head>
 	<?php $this->load->view('elements/head'); ?>
 	<link rel="stylesheet" href="<?php echo static_url('css/home.css?v='.V); ?>">
+	<script src="<?php echo static_url('js/home.js?V='.V); ?>"></script>
 </head>
 <body>
 	<?php $this->load->view('elements/menu'); ?>
 	<div class="wrapper">
 		<div class="slide city">
-			<div class="header-section">
+			<div class="header-section logo-section">
 				<a href="<?php echo locale_url(); ?>" class="unstyled">
 					<img class="logo" src="<?php echo static_url('img/logo.png'); ?>" alt="Logo">
 				</a>
@@ -66,14 +67,25 @@
 				<h2><?php echo lang('portfolio'); ?></h2>
 				<br>
 				<div>
-					<button class="gradient-button">Test</button>
-					<button class="gradient-button">Test</button>
-					<button class="gradient-button">Test</button>
-					<button class="gradient-button">Test</button>
+					<?php foreach($project_types as $t) { ?>
+						<button class="gradient-button"><?php echo lang($t->type); ?></button>
+					<?php } ?>
 				</div>
 			</div>
-			<div class="text-center">
-				
+			<div class="projects text-center">
+				<?php foreach($projects as $p) { ?>
+					<div class="project">
+						<img src="<?php echo static_url("uploads/projects/{$p->image}"); ?>"
+							alt="<?php echo $p->name; ?>">
+					</div>
+				<?php } ?>
+			</div>
+			<div class="projects-pagination">
+				<span class="projects-pagination-arrow left">
+					<span class="fa fa-chevron-left"></span>
+				</span><span class="projects-pagination-arrow right"><!-- Sorry about that, but no whitespace -->
+					<span class="fa fa-chevron-right"></span>
+				</span>
 			</div>
 		</div>
 		<div class="slide">

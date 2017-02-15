@@ -8,6 +8,8 @@ $lang['adwords'] = 'Adwords/adsense';
 $lang['blog'] = 'ბლოგი';
 $lang['searching_for_other'] = 'თუ სხვას ეძებ';
 
+$lang['websites'] = 'საიტები';
+
 $lang['our_team'] = 'ჩვენი გუნდი';
 $lang['portfolio'] = 'პორტფოლიო';
 $lang['what_are_you_waiting_for'] = 'რაღას ელოდები';
