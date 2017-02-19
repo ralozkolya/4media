@@ -74,6 +74,20 @@ function get_lang() {
 	return $ci->config->item('language');
 }
 
+function get_other_lang() {
+
+	$lang = get_lang();
+
+	if($lang === GE) return EN;
+	return GE;
+}
+
+function get_lang_label($lang) {
+
+	if($lang === GE) return 'ქარ';
+	return 'eng';
+}
+
 function get_lang_code($lang) {
 	switch($lang) {
 		case EN: return 'en';

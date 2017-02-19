@@ -53,6 +53,8 @@
 	position: fixed;
 	height: 100vh;
 	width: 300px;
+	background: white;
+	border-right: solid 2px $gray;
 	transform: translateX(-300px);
 	overflow-y: auto;
 	transition: .5s transform;

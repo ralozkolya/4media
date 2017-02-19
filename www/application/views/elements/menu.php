@@ -7,7 +7,7 @@
 		</button>
 	</div>
 	<div>
-		<a href="#" class="lang-link">ENG</a>
+		<a href="<?php echo lang_link(get_other_lang()); ?>" class="lang-link"><?php echo get_lang_label(get_other_lang()) ?></a>
 	</div>
 </div>
 <div class="menu">
@@ -22,7 +22,7 @@
 				<img src="<?php echo static_url('img/logo.png'); ?>" alt="Logo">
 			</div>
 			<div class="col-xs-4">
-				<a href="#" class="lang-link">ENG</a>
+				<a href="<?php echo lang_link(get_other_lang()); ?>" class="lang-link"><?php echo get_lang_label(get_other_lang()) ?></a>
 			</div>
 		</div>
 	</div>

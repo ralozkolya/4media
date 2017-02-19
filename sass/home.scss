@@ -26,13 +26,23 @@
 	padding: 20px 5px;
 	width: 150px;
 	height: 100px;
-	border: solid 1px $light-green;
+	border: solid 1px $dark-green;
 	border-radius: 5px;
+	transition: .5s background-color;
 
 	.fa {
-		color: $light-green;
+		color: $dark-green;
 		font-size: 2em;
-		margin-bottom: 10px;
+		margin-bottom: 15px;
+		transition: .5s color;
+	}
+
+	&:hover {
+		border-color: $light-green;
+
+		.fa {
+			color: $light-green;
+		}
 	}
 
 	@media (min-height: 800px) {
@@ -90,7 +100,7 @@
 	}
 
 	.form-control {
-		background: #ecf0f1;
+		background: $gray;
 		border: none;
 		box-shadow: none;
 	}
@@ -109,5 +119,33 @@
 
 	> img {
 		transform: rotate(-45deg);
+	}
+}
+
+.address {
+
+	font-size: 16px;
+	font-weight: bold;
+
+	> div {
+		margin-bottom: 10px;
+	}
+
+	.fa-container {
+		position: relative;
+		top: 7px;
+		display: inline-block;
+		margin-right: 10px;
+		padding-top: 8px;
+		text-align: center;
+		width: 50px;
+		height: 50px;
+		border: solid 3px $light-green;
+		border-radius: 50%;
+	}
+
+	.fa {
+		font-size: 30px;
+		color: $light-green;
 	}
 }
