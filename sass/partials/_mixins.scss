@@ -9,3 +9,10 @@
 @mixin gradient-background($start: $light-green, $end: $dark-green) {
 	background-image: linear-gradient(to bottom, $start, $end);
 }
+
+@mixin unstyled-button() {
+	padding: 0;
+	background: none;
+	border: none;
+	outline: none;
+}

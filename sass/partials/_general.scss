@@ -1,5 +1,6 @@
 body {
 	@include bpg-nino();
+	position: relative;
 	background: url('../img/bg.jpg');
 	overflow-x: hidden;
 }
@@ -39,10 +40,6 @@ img {
 	&:hover, &:focus {
 		@include gradient-background();
 	}
-}
-
-.shifted {
-	transform: translateX(300px);
 }
 
 

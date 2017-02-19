@@ -1,17 +1,14 @@
-.menu {
+.menu-button {
 	text-align: center;
 	position: fixed;
 	width: 50px;
-	top: 100px;
+	top: 50px;
 	left: 50px;
 	z-index: 100;
 
 	.menu-toggle {
+		@include unstyled-button();
 		margin-bottom: 5px;
-		padding: 0;
-		background: none;
-		border: none;
-		outline: none;
 		width: 50px;
 
 		> .icon-bar {
@@ -27,6 +24,14 @@
 			}
 		}
 	}
+
+	&.gone {
+		transform: translateX(-120px);
+	}
+}
+
+.menu-button {
+	transition: .5s transform;
 }
 
 .lang-link, .lang-link:hover, .lang-link:focus {
@@ -41,4 +46,52 @@
 	&:hover {
 		border-color:$light-green;
 	}
+}
+
+.menu {
+	text-align: center;
+	position: fixed;
+	height: 100vh;
+	width: 300px;
+	transform: translateX(-300px);
+	overflow-y: auto;
+	transition: .5s transform;
+
+	.menu-header {
+		padding-top: 10px;
+	}
+
+	.menu-close, .lang-link {
+		margin-top: 15px;
+	}
+
+	.menu-close {
+		@include unstyled-button();
+	}
+
+	.fa-close {
+		color: $light-green;
+		font-size: 40px;
+	}
+
+	.nav li {
+
+		> a {
+			border-radius: 0;
+			color: $light-green;
+		}
+
+		&.active > a {
+			color: white;
+			background: $light-green;
+		}
+	}
+}
+
+.shifted-wrapper {
+	transform: translateX(300px);
+}
+
+.shifted-menu {
+	transform: none;
 }
