@@ -6,6 +6,7 @@ class MY_Controller extends CI_Controller {
 	protected $data = [
 		'title' => '4media',
 		'highlighted' => NULL,
+		'menu' => NULL,
 	];
 
 	public function __construct() {

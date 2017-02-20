@@ -31,7 +31,7 @@ class Project extends MY_Model {
 
 		$this->db->select([
 			"{$lang}_name as name",
-			'id', 'image',
+			'id', 'image', 'type',
 		]);
 	}
 

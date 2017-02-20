@@ -1,63 +1,83 @@
 <div class="slide" id="contact">
-	<div class="header-section">
-		<h2 class="light-green"><?php echo lang('what_are_you_waiting_for'); ?></h2>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-4 col-sm-offset-1 address">
-				<div>
-					<div class="fa-container">
-						<span class="fa fa-map-marker"></span>
+	<div class="info">
+		<div class="header-section">
+			<h2 class="light-green"><?php echo lang('what_are_you_waiting_for'); ?></h2>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-1 address">
+					<div>
+						<div class="fa-container">
+							<span class="fa fa-map-marker"></span>
+						</div>
+						<?php echo lang('address'); ?>
 					</div>
-					<?php echo lang('address'); ?>
-				</div>
-				<div>
-					<div class="fa-container">
-						<span class="fa fa-phone"></span>
+					<div>
+						<div class="fa-container">
+							<span class="fa fa-phone"></span>
+						</div>
+						<?php echo lang('phone'); ?>
 					</div>
-					<?php echo lang('phone'); ?>
+					<div>
+						<a class="unstyled" target="_blank" href="https://www.facebook.com/4MEDIA.GE/">
+							<div class="social">
+								<span class="fa fa-facebook"></span>
+							</div>
+						</a>
+						<a class="unstyled" target="_blank" href="#">
+							<div class="social">
+								<span class="fa fa-twitter"></span>
+							</div>
+						</a>
+						<a class="unstyled" target="_blank" href="#">
+							<div class="social">
+								<span class="fa fa-instagram"></span>
+							</div>
+						</a>
+						<?php echo lang('for_more_contact'); ?>
+					</div>
 				</div>
-			</div>
-			<div class="col-sm-7">
-				<form method="post" class="message-form">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="form-group">
-								<input
-									class="form-control"
-									type="text"
-									name="name"
-									placeholder="<?php echo lang('name'); ?>">
+				<div class="col-sm-7">
+					<form method="post" class="message-form">
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<input
+										class="form-control"
+										type="text"
+										name="name"
+										placeholder="<?php echo lang('name'); ?>">
+								</div>
+								<div class="form-group">
+									<input
+										class="form-control"
+										type="email"
+										name="email"
+										placeholder="<?php echo lang('email'); ?>">
+								</div>
+								<div class="form-group">
+									<input
+										class="form-control"
+										type="text"
+										name="subject"
+										placeholder="<?php echo lang('subject'); ?>">
+								</div>
 							</div>
-							<div class="form-group">
-								<input
-									class="form-control"
-									type="email"
-									name="email"
-									placeholder="<?php echo lang('email'); ?>">
-							</div>
-							<div class="form-group">
-								<input
-									class="form-control"
-									type="text"
-									name="subject"
-									placeholder="<?php echo lang('subject'); ?>">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<textarea
+										class="form-control"
+										name="message"
+										placeholder="<?php echo lang('message'); ?>"></textarea>
+								</div>
+								<div class="form-group">
+									<input type="submit" class="btn btn-block btn-primary"
+										value="<?php echo lang('send'); ?>">
+								</div>
 							</div>
 						</div>
-						<div class="col-sm-6">
-							<div class="form-group">
-								<textarea
-									class="form-control"
-									name="message"
-									placeholder="<?php echo lang('message'); ?>"></textarea>
-							</div>
-							<div class="form-group">
-								<input type="submit" class="btn btn-block btn-primary"
-									value="<?php echo lang('send'); ?>">
-							</div>
-						</div>
-					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>

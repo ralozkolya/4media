@@ -3,20 +3,26 @@
 		<h2><?php echo lang('portfolio'); ?></h2>
 		<br>
 		<div>
+			<button class="gradient-button type-button active" data-type="all"><?php echo lang('all'); ?></button>
 			<?php foreach($project_types as $t) { ?>
-				<button class="gradient-button"><?php echo lang($t->type); ?></button>
+				<button class="gradient-button type-button" data-type="<?php echo $t->type; ?>">
+					<?php echo lang($t->type); ?>
+				</button>
 			<?php } ?>
 		</div>
 	</div>
 	<div class="projects text-center">
 		<?php foreach($projects as $p) { ?>
-			<div class="project">
+			<div class="project" data-type="<?php echo $p->type; ?>">
 				<img src="<?php echo static_url("uploads/projects/{$p->image}"); ?>"
 					alt="<?php echo $p->name; ?>">
 			</div>
 		<?php } ?>
 	</div>
-	<div class="projects-pagination">
+	<div class="text-center">
+		<button class="gradient-button open-overlay active" data-opens=".portfolio"><?php echo lang('show_all'); ?></button>
+	</div>
+	<div class="projects-pagination hidden-xs">
 		<a class="unstyled projects-pagination-arrow left" href="#">
 			<span class="fa fa-chevron-left"></span>
 		</a>

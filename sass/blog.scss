@@ -1,0 +1,33 @@
+@import 'partials/variables';
+
+.single-post {
+	margin-top: 40px;
+
+	h1.light-green {
+		margin-bottom: 40px;
+	}
+}
+
+h3.date {
+	margin: 50px 0;
+
+	@media (min-width: $sm) {
+		margin-top: 0;
+	}
+}
+
+.post {
+	margin-bottom: 40px;
+
+	@media (min-width: $sm) {
+		.list-header {
+			margin-top: 0;
+		}
+	}
+}
+
+.left-column {
+	@media (min-width: $sm) {
+		text-align: right;
+	}
+}

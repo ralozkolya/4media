@@ -5,7 +5,7 @@
 		</a>
 	</div>
 	<div class="text-center">
-		<a href="#" class="unstyled">
+		<a href="#" class="unstyled open-overlay" data-opens=".sites">
 			<div class="section-button">
 				<div><span class="fa fa-television"></span></div>
 				<div class="name"><?php echo lang('make_sites'); ?></div>
@@ -24,19 +24,19 @@
 			</div>
 		</a>
 		<br class="hidden-xs">
-		<a href="#" class="unstyled">
+		<a href="#" class="unstyled open-overlay" data-opens=".sense">
 			<div class="section-button">
 				<div><span class="fa fa-google"></span></div>
 				<div class="name"><?php echo lang('adwords'); ?></div>
 			</div>
 		</a>
-		<a href="#" class="unstyled">
+		<a href="<?php echo locale_url('blog'); ?>" class="unstyled">
 			<div class="section-button">
 				<div><span class="fa fa-bold"></span></div>
 				<div class="name"><?php echo lang('blog'); ?></div>
 			</div>
 		</a>
-		<a href="#" class="unstyled">
+		<a href="#" class="unstyled open-overlay" data-opens=".other">
 			<div class="section-button">
 				<div><span class="fa fa-paper-plane-o"></span></div>
 				<div class="name"><?php echo lang('searching_for_other'); ?></div>

@@ -2,8 +2,8 @@
 	text-align: center;
 	position: fixed;
 	width: 50px;
-	top: 50px;
-	left: 50px;
+	top: 15px;
+	left: 15px;
 	z-index: 100;
 
 	.menu-toggle {
@@ -27,6 +27,11 @@
 
 	&.gone {
 		transform: translateX(-120px);
+	}
+
+	@media (min-width: $sm) {
+		top: 50px;
+		left: 50px;
 	}
 }
 
@@ -63,19 +68,6 @@
 		padding-top: 10px;
 	}
 
-	.menu-close, .lang-link {
-		margin-top: 15px;
-	}
-
-	.menu-close {
-		@include unstyled-button();
-	}
-
-	.fa-close {
-		color: $light-green;
-		font-size: 40px;
-	}
-
 	.nav li {
 
 		> a {
@@ -96,4 +88,16 @@
 
 .shifted-menu {
 	transform: none;
+}
+
+.menu-close, .lang-link {
+	margin-top: 15px;
+}
+
+.menu-close {
+	@include unstyled-button();
+
+	> img {
+		margin-top: 7px;
+	}
 }

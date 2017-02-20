@@ -1,23 +1,12 @@
 @import 'partials/variables';
 @import 'partials/mixins';
 
-.logo {
-	margin: 60px 0;
+body {
+	background: url('../img/bg.jpg');
 }
 
-.header-section {
-	padding: 60px 0;
-	text-align: center;
-
-	@media(min-height: 600px) {
-		padding: 20px 0;
-	}
-
-	&.logo-section {
-		@media (min-height: 800px) {
-			padding: 140px 0;
-		}
-	}
+.logo {
+	margin: 60px 0;
 }
 
 .section-button {
@@ -55,6 +44,7 @@
 .projects {
 	white-space: nowrap;
 	overflow-x: scroll;
+	overflow-y: hidden;
 
 	> .project {
 		display: inline-block;
@@ -84,11 +74,15 @@
 	}
 }
 
+.info {
+	padding-bottom: 60vh;
+}
+
 .map {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 50%;
+	height: 50vh;
 }
 
 .message-form {
@@ -103,6 +97,7 @@
 		background: $gray;
 		border: none;
 		box-shadow: none;
+		text-transform: uppercase;
 	}
 
 	textarea {
@@ -123,29 +118,17 @@
 }
 
 .address {
-
+	
+	position: relative;
+	top: -10px;
 	font-size: 16px;
 	font-weight: bold;
 
 	> div {
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 	}
+}
 
-	.fa-container {
-		position: relative;
-		top: 7px;
-		display: inline-block;
-		margin-right: 10px;
-		padding-top: 8px;
-		text-align: center;
-		width: 50px;
-		height: 50px;
-		border: solid 3px $light-green;
-		border-radius: 50%;
-	}
-
-	.fa {
-		font-size: 30px;
-		color: $light-green;
-	}
+.overlay-project {
+	margin-bottom: 20px;
 }
