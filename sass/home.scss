@@ -12,32 +12,26 @@ body {
 .section-button {
 	display: inline-block;
 	margin: 0 30px 30px 30px;
-	padding: 20px 5px;
-	width: 150px;
-	height: 100px;
-	border: solid 1px $dark-green;
-	border-radius: 5px;
-	transition: .5s background-color;
+	padding-top: 65px;
+	width: 136px;
+	height: 95px;
+	font-size: 13px;
+	background: url('../img/icons.png');
+	background-repeat: no-repeat;
+	transition: background-position .3s;
 
-	.fa {
-		color: $dark-green;
-		font-size: 2em;
-		margin-bottom: 15px;
-		transition: .5s color;
-	}
+	$list: make-sites, social-media, about-us, google, blog, searching-for-other;
 
-	&:hover {
-		border-color: $light-green;
+	@for $i from 1 through length($list) {
+	    $b: nth($list, $i);
 
-		.fa {
-			color: $light-green;
-		}
-	}
+	    &.#{$b} {
+	    	background-position: (($i - 1) * -136px) 0;
 
-	@media (min-height: 800px) {
-		font-size: 24px;
-		width: 240px;
-		height: 140px;
+			&:hover {
+				background-position: (($i - 1) * -136px) -95px;
+			}
+	    }
 	}
 }
 
