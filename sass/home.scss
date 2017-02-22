@@ -43,6 +43,7 @@ body {
 	> .project {
 		display: inline-block;
 		padding: 30px;
+		width: 50%;
 
 		> .image {
 			width: 100%;
@@ -51,6 +52,10 @@ body {
 
 		@media (min-width: $sm) {
 			width: 33.33%;
+		}
+
+		@media (orientation: portrait) {
+			width: 100%;
 		}
 	}
 
