@@ -1,3 +1,5 @@
+var scrolling = false;
+
 $(function() {
 
 	$('body').scrollspy({target: '#navigation-container'});
@@ -8,9 +10,7 @@ $(function() {
 
 		var target = $($(this).attr('href'));
 
-		$('html, body').stop().animate({
-			scrollTop: target.offset().top,
-		}, 500);
+		scrollTo(target);
 
 		toggleMenu();
 	});
@@ -87,6 +87,27 @@ $(function() {
 	});
 
 	$(window).on('popstate', closeOverlay);
+
+
+	$(document).on('wheel', function(e) {
+
+		if(!e.ctrlKey) {
+			e.preventDefault();
+
+			var delta = e.originalEvent.deltaY;
+			var linkElement;
+
+			if(delta > 0) {
+				linkElement = $('.navigation .active').next().children('a');
+			} else {
+				linkElement = $('.navigation .active').prev().children('a');
+			}
+
+			if(linkElement.length) {
+				scrollTo($($(linkElement).attr('href')));
+			}
+		}
+	});
 });
 
 function closeOverlay(page) {
@@ -101,4 +122,17 @@ function closeOverlay(page) {
 	setTimeout(function() {
 		parent.hide();
 	}, 500);
+}
+
+function scrollTo(target) {
+
+	if(scrolling) return;
+
+	scrolling = true;
+
+	$('html, body').stop().animate({
+		scrollTop: target.offset().top,
+	}, 500, function() {
+		scrolling = false;
+	});
 }
