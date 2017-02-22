@@ -14,13 +14,13 @@
 	<div class="projects text-center">
 		<?php foreach($projects as $p) { ?>
 			<div class="project" data-type="<?php echo $p->type; ?>">
-				<img src="<?php echo static_url("uploads/projects/{$p->image}"); ?>"
-					alt="<?php echo $p->name; ?>">
+				<div class="image"
+					style="background-image: url('<?php echo static_url("uploads/projects/{$p->image}"); ?>');"></div>
 			</div>
 		<?php } ?>
 	</div>
 	<div class="text-center">
-		<button class="gradient-button open-overlay active" data-opens=".portfolio"><?php echo lang('show_all'); ?></button>
+		<button class="gradient-button open-overlay portfolio-button active" data-opens=".portfolio"><?php echo lang('show_all'); ?></button>
 	</div>
 	<div class="projects-pagination hidden-xs">
 		<a class="unstyled projects-pagination-arrow left" href="#">
