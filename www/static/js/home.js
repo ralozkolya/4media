@@ -1,4 +1,5 @@
 var scrolling = false;
+var openOverlay = false;
 
 $(function() {
 
@@ -68,6 +69,8 @@ $(function() {
 
 		closeOverlay();
 
+		openOverlay = true;
+
 		var target = $(this).attr('data-opens');
 
 		history.pushState(null, null, '#'+target.substring(1));
@@ -91,7 +94,8 @@ $(function() {
 
 	$(document).on('wheel', function(e) {
 
-		if(!e.ctrlKey) {
+		if(!openOverlay && !e.ctrlKey) {
+
 			e.preventDefault();
 
 			var delta = e.originalEvent.deltaY;
@@ -111,6 +115,8 @@ $(function() {
 });
 
 function closeOverlay(page) {
+
+	openOverlay = false;
 
 	history.pushState(null, null, '#');
 
