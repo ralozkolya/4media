@@ -22,6 +22,7 @@
 	<div class="text-center">
 		<button class="gradient-button open-overlay portfolio-button active" data-opens=".portfolio"><?php echo lang('show_all'); ?></button>
 	</div>
+	<br>
 	<div class="projects-pagination hidden-xs">
 		<a class="unstyled projects-pagination-arrow left" href="#">
 			<span class="fa fa-chevron-left"></span>
