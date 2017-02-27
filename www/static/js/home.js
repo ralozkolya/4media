@@ -34,12 +34,11 @@ $(function() {
 		$('.type-button').removeClass('active');
 
 		var type = $(this).addClass('active').attr('data-type');
-
-		if(type === 'all') {
-			$('.project').show();
-		} else {
-			$('.project').hide();
-			$('.project[data-type='+type+']').show();
+		
+		$('.projects').slick('slickUnfilter');
+		
+		if(type !== 'all') {
+			$('.projects').slick('slickFilter', '[data-type='+type+']');
 		}
 	});
 
