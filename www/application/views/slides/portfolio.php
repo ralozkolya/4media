@@ -20,7 +20,7 @@
 		<?php } ?>
 	</div>
 	<div class="text-center">
-		<button class="gradient-button open-overlay portfolio-button active" data-opens=".portfolio"><?php echo lang('show_all'); ?></button>
+		<button class="btn btn-primary open-overlay portfolio-button" data-opens=".portfolio"><?php echo lang('show_all'); ?></button>
 	</div>
 	<br>
 	<div class="projects-pagination hidden-xs">

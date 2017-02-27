@@ -120,6 +120,7 @@ img {
 	border-color: $light-green;
 	text-transform: uppercase;
 
+	&:hover,
 	&:focus {
 		background: $dark-green;
 	}
