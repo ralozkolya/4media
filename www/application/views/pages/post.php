@@ -2,6 +2,15 @@
 <html lang="<?php echo get_lang_code(get_lang()); ?>">
 <head>
 	<?php $this->load->view('elements/head'); ?>
+
+	<?php $image_url = image_exists($more->image, 'static/uploads/posts/'); ?>
+
+	<meta property="og:url" content="<?php echo locale_url("post/{$post->id}/{$post->slug}"); ?>">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="<?php echo $post->title; ?>">
+	<meta property="og:description" content="<?php echo mb_substr($post->body, 0, 150); ?>">
+	<meta property="og:image" content="<?php echo $image_url; ?>">
+
 	<link rel="stylesheet" href="<?php echo static_url('css/blog.css?v='.V) ?>">
 </head>
 <body>
@@ -15,7 +24,8 @@
 			<div class="row">
 				<div class="col-sm-5 left-column">
 					<div>
-						<img src="<?php echo static_url("uploads/posts/{$post->image}"); ?>" alt="<?php echo $post->title; ?>">
+						<img src="<?php echo $image_url; ?>"
+							alt="<?php echo $post->title; ?>">
 					</div>
 					<br>
 					<br>
