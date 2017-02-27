@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="<?php echo static_url('css/blog.css?v='.V) ?>">
 </head>
 <body>
+	<div id="fb-root"></div>
 	<?php $this->load->view('elements/menu'); ?>
 	<div class="wrapper">
 		<div class="container single-post">
@@ -17,6 +18,10 @@
 						<img src="<?php echo static_url("uploads/posts/{$post->image}"); ?>" alt="<?php echo $post->title; ?>">
 					</div>
 					<br>
+					<br>
+					<div class="fb-like" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+					<br>
+					<br>
 					<div>
 						<a href="<?php echo $this->agent->referrer(); ?>" class="btn btn-primary btn-lg"><?php echo lang('back'); ?></a>
 					</div>
@@ -28,5 +33,14 @@
 			</div>
 		</div>
 	</div>
+	<script>
+	(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=1533521776920889";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
 </body>
 </html>
