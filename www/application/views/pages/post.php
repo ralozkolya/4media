@@ -8,7 +8,7 @@
 	<meta property="og:url" content="<?php echo locale_url("post/{$post->id}/{$post->slug}"); ?>">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="<?php echo $post->title; ?>">
-	<meta property="og:description" content="<?php echo mb_substr(strip_tags($post->body), 0, 150); ?>">
+	<meta property="og:description" content="<?php echo strip_tags($post->body); ?>">
 	<meta property="og:image" content="<?php echo $image_url; ?>">
 
 	<link rel="stylesheet" href="<?php echo static_url('css/blog.css?v='.V) ?>">
