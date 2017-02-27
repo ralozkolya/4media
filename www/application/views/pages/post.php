@@ -3,13 +3,21 @@
 <head>
 	<?php $this->load->view('elements/head'); ?>
 
-	<?php $image_url = image_exists($post->image, 'static/uploads/posts/'); ?>
+	<?php
+		$image_url = image_exists($post->image, 'static/uploads/posts/');
+		$dimensions = image_dimensions($post->image, 'static/uploads/posts/');
+	?>
 
 	<meta property="og:url" content="<?php echo locale_url("post/{$post->id}/{$post->slug}"); ?>">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="<?php echo $post->title; ?>">
 	<meta property="og:description" content="<?php echo strip_tags($post->body); ?>">
 	<meta property="og:image" content="<?php echo $image_url; ?>">
+
+	<?php if($dimensions) { ?>
+		<meta property="og:image:width" content="<?php echo $dimensions['width']; ?>">
+		<meta property="og:image:height" content="<?php echo $dimensions['height']; ?>">
+	<?php } ?>
 
 	<link rel="stylesheet" href="<?php echo static_url('css/blog.css?v='.V) ?>">
 </head>
