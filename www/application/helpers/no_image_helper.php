@@ -22,7 +22,7 @@ function image_dimensions($image, $path) {
 		if($dimensions[0] && $dimensions[1]) {
 			return [
 				'width' => $dimensions[0],
-				'height' = $dimensions[1],
+				'height' => $dimensions[1],
 			];
 		}
 	}
