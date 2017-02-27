@@ -3,7 +3,7 @@
 <head>
 	<?php $this->load->view('elements/head'); ?>
 
-	<?php $image_url = image_exists($more->image, 'static/uploads/posts/'); ?>
+	<?php $image_url = image_exists($post->image, 'static/uploads/posts/'); ?>
 
 	<meta property="og:url" content="<?php echo locale_url("post/{$post->id}/{$post->slug}"); ?>">
 	<meta property="og:type" content="article">
