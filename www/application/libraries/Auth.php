@@ -13,13 +13,11 @@ class Auth {
 		$this->CI->load->model('User');
 	}
 
-	public function login($email, $password) {
+	public function login($username, $password) {
 
-		$user = $this->check($email, $password);
+		$user = $this->check($username, $password);
 
 		if($user) {
-			
-			$this->CI->User->clear_token($user->id);
 			$this->CI->session->set_userdata(USER, $user);
 
 			return TRUE;
@@ -81,9 +79,9 @@ class Auth {
 		return $user;
 	}
 
-	public function check($email, $password) {
+	public function check($username, $password) {
 
-		$user = $this->CI->User->get_by_key('email', $email);
+		$user = $this->CI->User->get_by_key('username', $username);
 
 		if($user) {
 

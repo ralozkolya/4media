@@ -3,8 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Page extends MY_Model {
 
+	protected $upload_path = 'static/uploads/pages/';
+
 	protected $table = 'pages';
 	protected $slug = 'en_title';
+	protected $with_image = TRUE;
 
 	public function get_navigation() {
 
@@ -12,6 +15,13 @@ class Page extends MY_Model {
 		$this->db->order_by('priority');
 
 		return $this->get_localized_list();
+	}
+
+	public function get_localized($slug) {
+
+		$this->db->where('slug', $slug);
+		$this->select_localized();
+		return $this->db->get($this->table)->row();
 	}
 
 	public function get_localized_list($limit = NULL, $offset = NULL) {
@@ -27,7 +37,7 @@ class Page extends MY_Model {
 		$this->db->select([
 			"{$lang}_title as title",
 			"{$lang}_body as body",
-			"id", "slug",
+			"id", "slug", 'image',
 		]);
 	}
 
