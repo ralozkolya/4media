@@ -36,31 +36,13 @@ body {
 }
 
 .projects {
-	white-space: nowrap;
-	overflow-x: scroll;
-	overflow-y: hidden;
 
-	> .project {
-		display: inline-block;
+	.project {
 		padding: 30px;
-		width: 50%;
 
-		> .image {
-			width: 100%;
-			padding-top: 59.52%;
+		.image {
+			padding-top: 60%;
 		}
-
-		@media (min-width: $sm) {
-			width: 33.33%;
-		}
-
-		@media (orientation: portrait) {
-			width: 100%;
-		}
-	}
-
-	@media (min-width: $sm) {
-		overflow: hidden;
 	}
 }
 
