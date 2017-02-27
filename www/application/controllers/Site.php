@@ -82,12 +82,26 @@ class Site extends MY_Controller {
 	private function get_post($id) {
 
 		$this->load->model('Post');
-		return $this->Post->get_localized($id);
+		$post = $this->Post->get_localized($id);
+
+		if(!$post) {
+			show_404();
+			return;
+		}
+
+		return $post;
 	}
 
 	private function get_page($slug) {
 		$this->load->model('Page');
-		return $this->Page->get_localized($slug);
+		$page = $this->Page->get_localized($slug);
+
+		if(!$page) {
+			show_404();
+			return;
+		}
+
+		return $page;
 	}
 
 	private function get_navigation() {
