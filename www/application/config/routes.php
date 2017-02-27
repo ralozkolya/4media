@@ -56,6 +56,7 @@ $lang = '('.GE.'|'.EN.')';
 $route[$lang] = 'site';
 $route[$lang.'/(:any)'] = 'site/$2';
 
+$route[$lang.'/blog/(:num)'] = 'site/blog/$2';
 $route[$lang.'/post/(:num)/(:any)'] = 'site/post/$2/$3';
 
 $route['default_controller'] = 'site';

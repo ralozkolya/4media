@@ -13,7 +13,7 @@
 		<div class="container">
 			<?php foreach($posts as $p) { ?>
 				<div class="row post">
-					<div class="col-sm-4 col-sm-offset-1">
+					<div class="col-sm-4 col-sm-offset-1 image-col">
 						<a href="<?php echo locale_url("post/{$p->id}/{$p->slug}"); ?>">
 							<img src="<?php echo static_url("uploads/posts/thumbs/{$p->image}"); ?>" alt="<?php echo $p->title; ?>">
 						</a>
@@ -27,6 +27,11 @@
 					</div>
 				</div>
 			<?php } ?>
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<?php echo $this->pagination->create_links(); ?>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

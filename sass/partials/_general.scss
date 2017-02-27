@@ -62,31 +62,41 @@ img {
 	transition: all .5s;
 
 	.sidebar {
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 120px;
+		padding: 20px;
 		background: url('../img/city.jpg');
+		background-position: bottom left;
+		background-size: cover;
+
+		@media (min-width: $sm) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 120px;
+			text-align: center;
+			background-position: center;
+		}
 	}
 
 	.content {
-		padding: 30px 30px 30px 150px;
+		padding: 10px;
 		max-height: 100%;
 		overflow-y: auto;
 		z-index: 50;
 
+		@media (min-width: $sm) {
+			padding: 30px 30px 30px 150px;
+		}
+
 		.nano {
 			padding: 20px;
-			height: calc(100vh - 200px);
+			height: calc(100vh - 350px);
 			bottom: 0;
-		} 
-	}
 
-	&.portfolio {
-		.content {
-			overflow-y: hidden;
-		}
+			@media (min-width: $sm) {
+				height: calc(100vh - 200px);
+			}
+		} 
 	}
 
 	&.active {

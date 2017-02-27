@@ -90,13 +90,18 @@
 }
 
 .menu-close, .lang-link {
-	margin-top: 15px;
+
+	@media (min-width: $sm) {
+		margin-top: 15px;
+	}
 }
 
 .menu-close {
 	@include unstyled-button();
 
-	> img {
-		margin-top: 7px;
+	@media (min-width: $sm) {
+		> img {
+			margin-top: 7px;
+		}
 	}
 }

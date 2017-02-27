@@ -10,7 +10,7 @@ $lang['searching_for_other'] = "Looking for other?";
 $lang['contact'] = 'Contact';
 
 $lang['all'] = 'All';
-$lang['websites'] = 'websites';
+$lang['websites'] = 'Websites';
 $lang['apps'] = 'Mobile apps';
 $lang['logos'] = 'Logos';
 $lang['other'] = 'Other';
