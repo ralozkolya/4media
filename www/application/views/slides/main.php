@@ -10,12 +10,12 @@
 				<div class="name"><?php echo lang('make_sites'); ?></div>
 			</div>
 		</a>
-		<a href="#" class="unstyled">
+		<a href="#" class="unstyled open-overlay" data-opens=".social_media">
 			<div class="section-button social-media">
 				<div class="name"><?php echo lang('social_media'); ?></div>
 			</div>
 		</a>
-		<a href="#" class="unstyled">
+		<a href="#" class="unstyled open-overlay" data-opens=".more_about_us">
 			<div class="section-button about-us">
 				<div class="name"><?php echo lang('about_us'); ?></div>
 			</div>

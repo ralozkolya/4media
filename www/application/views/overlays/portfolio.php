@@ -16,8 +16,11 @@
 				<div class="row">
 					<?php foreach($projects as $p) { ?>
 						<div class="overlay-project col-sm-6" data-type="<?php echo $p->type; ?>">
-							<img src="<?php echo static_url("uploads/projects/{$p->image}"); ?>"
-								alt="<?php echo $p->name; ?>">
+							<?php $url = $p->link ? $p->link : '#'; ?>
+							<a class="unstyled" href="<?php echo $url; ?>" target="_blank">
+								<img src="<?php echo static_url("uploads/projects/{$p->image}"); ?>"
+									alt="<?php echo $p->name; ?>">
+							</a>
 						</div>
 					<?php } ?>
 				</div>

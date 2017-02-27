@@ -30,32 +30,16 @@
 	<br>
 	<div id="navigation-container">
 		<ul class="nav nav-pills nav-stacked navigation">
-			<?php if($menu === 'relative') { ?>
-				<li>
-					<a href="#main"><?php echo lang('main'); ?></a>
-				</li>
-				<li>
-					<a href="#our-team"><?php echo lang('our_team'); ?></a>
-				</li>
-				<li>
-					<a href="#portfolio"><?php echo lang('portfolio'); ?></a>
-				</li>
-				<li>
-					<a href="#contact"><?php echo lang('contact'); ?></a>
-				</li>
-			<?php } else { ?>
-				<li>
-					<a href="<?php echo locale_url('#main'); ?>"><?php echo lang('main'); ?></a>
-				</li>
-				<li>
-					<a href="<?php echo locale_url('#our-team'); ?>"><?php echo lang('our_team'); ?></a>
-				</li>
-				<li>
-					<a href="<?php echo locale_url('#portfolio'); ?>"><?php echo lang('portfolio'); ?></a>
-				</li>
-				<li>
-					<a href="<?php echo locale_url('#contact'); ?>"><?php echo lang('contact'); ?></a>
-				</li>
+			<?php foreach($navigation as $n) { ?>
+				<?php if($menu === 'relative') { ?>
+					<li>
+						<a href="<?php echo "#{$n->slug}"; ?>"><?php echo $n->title; ?></a>
+					</li>
+				<?php } else { ?>
+					<li>
+						<a href="<?php echo locale_url("#{$n->slug}"); ?>"><?php echo $n->title; ?></a>
+					</li>
+				<?php } ?>
 			<?php } ?>
 		</ul>
 	</div>

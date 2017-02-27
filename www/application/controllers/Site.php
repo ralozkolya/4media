@@ -8,6 +8,9 @@ class Site extends MY_Controller {
 		parent::__construct();
 
 		$this->load->language('general');
+		$this->load->helper('no_image');
+		
+		$this->data['navigation'] = $this->get_navigation();
 	}
 
 	public function index() {
@@ -15,13 +18,29 @@ class Site extends MY_Controller {
 		$this->data['project_types'] = $this->get_project_types();
 		$this->data['projects'] = $this->get_projects();
 		$this->data['menu'] = 'relative';
+		$this->data['our_team'] = $this->get_page('our-team');
+		$this->data['sites'] = $this->get_page('website-development');
+		$this->data['social_media'] = $this->get_page('social-media');
+		$this->data['other'] = $this->get_page('looking-for-other');
+		$this->data['more'] = $this->get_page('more-about-us');
+		$this->data['sense'] = $this->get_page('sense');
 
-		$this->view('pages/home', $this->data);
+		$this->view('pages/home');
 	}
 
 	public function blog($page = 1) {
 
-		$this->data['posts'] = $this->get_posts();
+		$posts = $this->get_posts($page);
+
+		$this->data['posts'] = $posts['data'];
+
+		$this->config->load('pagination');
+		$config = $this->config->item('pagination');
+		$config['base_url'] = locale_url('blog');
+		$config['per_page'] = POSTS_PER_PAGE;
+		$config['total_rows'] = $posts['rows'];
+		$this->load->library('pagination', $config);
+		
 		$this->data['title'] = lang('blog') . ' | ' . $this->data['title'];
 
 		$this->view('pages/blog', $this->data);
@@ -53,7 +72,7 @@ class Site extends MY_Controller {
 	private function get_posts($page = 1) {
 
 		$page = abs($page - 1);
-		$limit = 20;
+		$limit = POSTS_PER_PAGE;
 		$offset = $page * $limit;
 
 		$this->load->model('Post');
@@ -64,6 +83,16 @@ class Site extends MY_Controller {
 
 		$this->load->model('Post');
 		return $this->Post->get_localized($id);
+	}
+
+	private function get_page($slug) {
+		$this->load->model('Page');
+		return $this->Page->get_localized($slug);
+	}
+
+	private function get_navigation() {
+		$this->load->model('Page');
+		return $this->Page->get_navigation();
 	}
 
 }

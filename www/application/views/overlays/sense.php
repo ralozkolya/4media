@@ -1,7 +1,7 @@
 <div class="header-section">
 	<h2 class="light-green"><?php echo lang('adwords'); ?></h2>
 	<br>
-	<img src="<?php echo static_url('uploads/pages/other.png'); ?>" alt="Other">
+	<img src="<?php echo image_exists($sense->image, 'static/uploads/pages/'); ?>" alt="Other">
 	<br>
 	<br>
 	<div class="container-fluid">

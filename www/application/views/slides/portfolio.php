@@ -14,8 +14,11 @@
 	<div class="projects text-center">
 		<?php foreach($projects as $p) { ?>
 			<div class="project" data-type="<?php echo $p->type; ?>">
-				<div class="image"
-					style="background-image: url('<?php echo static_url("uploads/projects/{$p->image}"); ?>');"></div>
+				<?php $url = $p->link ? $p->link : '#'; ?>
+				<a class="unstyled" href="<?php echo $url; ?>" target="_blank">
+					<div class="image"
+						style="background-image: url('<?php echo static_url("uploads/projects/thumbs/{$p->image}"); ?>');"></div>
+				</a>
 			</div>
 		<?php } ?>
 	</div>
