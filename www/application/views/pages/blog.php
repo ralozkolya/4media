@@ -23,7 +23,7 @@
 							<h2 class="list-header light-green"><strong><?php echo $p->title; ?></strong></h2>
 						</a>
 						<h3><?php echo date('d/m/Y', strtotime($p->modified)); ?></h3>
-						<div><?php echo mb_substr($p->body, 0, 500); ?>...</div>
+						<div><?php echo mb_substr(strip_tags($p->body), 0, 500); ?>...</div>
 					</div>
 				</div>
 			<?php } ?>
