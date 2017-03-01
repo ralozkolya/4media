@@ -119,7 +119,6 @@ $config['add_Post'] = [
 
 $config['add_Project'] = [
 	$ka_name, $en_name,
-	$ka_desc, $en_desc,
 	$pinned, $priority,
 	$type,
 ];
@@ -134,7 +133,6 @@ $config['edit_Post'] = [
 $config['edit_Project'] = [
 	$id,
 	$ka_name, $en_name,
-	$ka_desc, $en_desc,
 	$pinned, $priority,
 	$type,
 ];
@@ -173,4 +171,13 @@ $config['send_mail'] = [
 		'label' => 'lang:message',
 		'rules' => 'required',
 	],
+];
+
+$config['add_News_post'] = [
+	$ka_desc, $en_desc,
+];
+
+
+$config['edit_News_post'] = [
+	$id, $ka_desc, $en_desc,
 ];

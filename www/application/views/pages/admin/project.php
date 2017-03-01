@@ -30,8 +30,6 @@
 								['name' => 'id', 'type' => 'hidden', 'value' => $item->id],
 								['name' => 'ka_name', 'value' => $item->ka_name],
 								['name' => 'en_name', 'value' => $item->en_name],
-								['name' => 'ka_desc', 'type' => 'ckeditor', 'value' => $item->ka_desc],
-								['name' => 'en_desc', 'type' => 'ckeditor', 'value' => $item->en_name],
 								['name' => 'type', 'type' => 'simple_select', 'value' => $types],
 								['name' => 'link', 'value' => $item->link],
 								['name' => 'priority', 'value' => $item->priority],

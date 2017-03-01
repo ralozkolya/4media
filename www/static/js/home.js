@@ -71,6 +71,9 @@ $(function() {
 		$(target).show();
 		$('body').css('overflow-y', 'hidden');
 
+		var overlayImage = $(target + ' .overlay-image');
+		overlayImage.attr('src', overlayImage.attr('data-src'));
+
 		setTimeout(function() {
 			$(target).addClass('active');
 		}, 0);
@@ -85,7 +88,7 @@ $(function() {
 	$(window).on('popstate', closeOverlay);
 
 
-	$(document).on('wheel', function(e) {
+	$('.wrapper').on('wheel', function(e) {
 
 		if(!openOverlay && !e.ctrlKey) {
 

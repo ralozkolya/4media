@@ -158,6 +158,21 @@ img {
 	background-color: $light-green;
 }
 
+.menu-news {
+	margin: 20px;
+	border: 1px solid $light-green;
+	border-radius: 10px;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+	}
+
+	> .description {
+		padding: 10px;
+	}
+}
+
 
 /*	HELPERS	*/
 

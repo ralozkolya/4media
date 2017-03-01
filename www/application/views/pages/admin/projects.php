@@ -42,8 +42,6 @@
 							$fields = [
 								['name' => 'ka_name', 'value' => set_value('ka_name')],
 								['name' => 'en_name', 'value' => set_value('en_name')],
-								['name' => 'ka_desc', 'type' => 'ckeditor', 'value' => set_value('ka_desc')],
-								['name' => 'en_desc', 'type' => 'ckeditor', 'value' => set_value('en_desc')],
 								['name' => 'type', 'type' => 'simple_select', 'value' => $types],
 								['name' => 'link', 'value' => set_value('link')],
 								['name' => 'priority', 'value' => set_value('priority')],

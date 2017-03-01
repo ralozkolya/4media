@@ -2,6 +2,9 @@
 <html>
 <head>
 	<?php $this->load->view('elements/admin/head'); ?>
+	<script>
+		config.type = 'posts';
+	</script>
 </head>
 <body>
 	<?php $this->load->view('elements/admin/sidebar'); ?>
@@ -9,7 +12,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
-					<h1><?php echo lang('news_post'); ?></h1>
+					<h1><?php echo $item->ka_desc; ?></h1>
 				</div>
 			</div>
 
@@ -21,21 +24,15 @@
 
 			<div class="row">
 				<div class="col-sm-6">
-					<h3><?php echo lang('existing_news'); ?></h3>
-					<?php echo admin_table('News_post', $items, [
-						'image', 
-					], static_url('uploads/news/')); ?>
-				</div>
-				<div class="col-sm-6">
-					<h3><?php echo lang('add_news'); ?></h3>
 					<form method="post" enctype="multipart/form-data">
 						<?php
 							$fields = [
-								['name' => 'ka_desc', 'type' => 'textarea', 'value' => set_value('ka_desc')],
-								['name' => 'en_desc', 'type' => 'textarea', 'value' => set_value('en_desc')],
-								['name' => 'link', 'value' => set_value('link')],
+								['name' => 'id', 'type' => 'hidden', 'value' => $item->id],
+								['name' => 'ka_desc', 'type' => 'textarea', 'value' => $item->ka_desc],
+								['name' => 'en_desc', 'type' => 'textarea', 'value' => $item->en_desc],
+								['name' => 'link', 'value' => $item->link],
 								['name' => 'image', 'type' => 'file'],
-								['type' => 'submit', 'value' => lang('add')],
+								['type' => 'submit', 'value' => lang('change')],
 							];
 
 							$form = form_fields($fields);
@@ -45,6 +42,10 @@
 							}
 						?>
 					</form>
+				</div>
+				<div class="col-sm-6">
+					<h3><?php echo lang('image'); ?></h3>
+						<img src="<?php echo image_exists($item->image, 'static/uploads/news/'); ?>" alt="Image">
 				</div>
 			</div>	
 		</div>

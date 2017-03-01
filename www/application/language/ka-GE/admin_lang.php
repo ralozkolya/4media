@@ -55,8 +55,8 @@ $lang['add_banner'] = 'ბანერის დამატება';
 $lang['link'] = 'ბმული';
 $lang['priority'] = 'პრიორიტეტი (ჩანაწერი ნაკლები პრიორიტეტით გამოჩნდება პირველი)';
 
-$lang['existing_news'] = 'არსებული სიახლეები';
-$lang['add_news'] = 'სიახლის დამატება';
+$lang['existing_news'] = 'არსებული სიახლე';
+$lang['add_news'] = 'სიახლის ჩანაცვლება';
 
 $lang['existing_projects'] = 'არსებული პროექტები';
 $lang['add_project'] = 'პროექტის დამატება';
@@ -71,3 +71,10 @@ $lang['websites'] = 'საიტები';
 $lang['apps'] = 'აპლიკაციები';
 $lang['logos'] = 'ლოგოები';
 $lang['other'] = 'სხვა';
+
+$lang['blog'] = 'ბლოგი';
+$lang['post'] = 'პოსტი';
+$lang['existing_posts'] = 'არსებული პოსტები';
+$lang['add_post'] = 'პოსტის დამატება';
+
+$lang['news_post'] = 'სიახლე (მენიუში)';

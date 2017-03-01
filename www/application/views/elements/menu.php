@@ -44,6 +44,21 @@
 		</ul>
 	</div>
 	<br>
+	<?php if(!empty($news)) { ?>
+		<?php $link = empty($news->link) ? '#' : $news->link; ?>
+		<a href="<?php echo $link; ?>" class="unstyled">
+			<div class="menu-news">
+				<?php if(!empty($news->image)) { ?>
+					<div>
+						<img src="<?php echo static_url("uploads/news/thumbs/{$news->image}"); ?>" alt="Offer">
+					</div>
+				<?php } ?>
+				<div class="description">
+					<?php echo $news->desc; ?>
+				</div>
+			</div>
+		</a>
+	<?php } ?>
 	<div>
 		<a class="unstyled" target="_blank" href="https://www.facebook.com/4MEDIA.GE/">
 			<div class="social">

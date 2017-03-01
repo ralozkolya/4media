@@ -1,10 +1,15 @@
 <div class="header-section">
 	<h2 class="light-green text-left"><?php echo $sites->title; ?></h2>
 	<br>
-	<img src="<?php echo image_exists($sites->image, 'static/uploads/pages/'); ?>" alt="Other">
-	<br>
-	<br>
-	<br>
+	<?php if(!empty($sites->image)) { ?>
+		<img
+			class="overlay-image"
+			data-src="<?php echo image_exists($sites->image, 'static/uploads/pages/'); ?>"
+			alt="Sites">
+		<br>
+		<br>
+		<br>
+	<?php } ?>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-5 col-sm-offset-1">

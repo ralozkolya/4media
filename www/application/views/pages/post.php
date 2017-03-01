@@ -26,28 +26,38 @@
 	<?php $this->load->view('elements/menu'); ?>
 	<div class="wrapper">
 		<div class="container single-post">
-			<div class="row">
-				<h1 class="light-green text-center"><?php echo $post->title; ?></h1>
-			</div>
-			<div class="row">
-				<div class="col-sm-5 left-column">
-					<div>
+			<h1 class="light-green text-center"><?php echo $post->title; ?></h1>
+			<?php if(!empty($post->image)) { ?>
+				<div class="row">
+					<div class="col-xs-12 text-center">
 						<img src="<?php echo $image_url; ?>"
 							alt="<?php echo $post->title; ?>">
 					</div>
-					<br>
-					<br>
-					<div class="fb-like" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
-					<br>
-					<br>
-					<div>
-						<a href="<?php echo $this->agent->referrer(); ?>" class="btn btn-primary btn-lg"><?php echo lang('back'); ?></a>
-					</div>
 				</div>
-				<div class="col-sm-7">
+				<br>
+			<?php } ?>
+			<div class="row">
+				<div class="col-xs-6 text-right">
 					<h3 class="date"><?php echo date('d/m/Y', strtotime($post->modified)); ?></h3>
-					<div><?php echo $post->body; ?></div>
 				</div>
+				<div class="col-xs-6">
+					<div class="fb-like" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="body"><?php echo $post->body; ?></div>
+				</div>
+			</div>
+			<div class="text-center">
+				
+				<br>
+				<br>
+				<div>
+					<a href="<?php echo $this->agent->referrer(); ?>" class="btn btn-primary btn-lg"><?php echo lang('back'); ?></a>
+				</div>
+				<br>
+				<br>
 			</div>
 		</div>
 	</div>

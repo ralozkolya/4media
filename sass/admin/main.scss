@@ -94,6 +94,6 @@ img {
 	text-decoration: none;
 }
 
-.delete, .delete:hover, .delete:focus {
+.delete:not(.btn), .delete:not(.btn):hover, .delete:not(.btn):focus {
 	color: #c55;
 }

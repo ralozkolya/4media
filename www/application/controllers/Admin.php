@@ -12,7 +12,7 @@ class Admin extends MY_Controller {
 		$this->load->library(['Auth', 'form_validation']);
 		$this->load->helper(['view', 'no_image']);
 		$this->load->model([
-			'Page', 'Post', 'Project',
+			'Page', 'Post', 'Project', 'News_post',
 		]);
 
 		$this->data['user'] = $this->auth->get_current_user();
@@ -50,7 +50,7 @@ class Admin extends MY_Controller {
 		$this->view('pages/admin/page');
 	}
 
-	public function news($page = 1) {
+	public function blog($page = 1) {
 
 		$this->data['type'] = $type = 'Post';
 
@@ -67,9 +67,9 @@ class Admin extends MY_Controller {
 		$config['total_rows'] = $posts['rows'];
 		$this->load->library('pagination', $config);
 
-		$this->data['highlighted'] = 'news';
+		$this->data['highlighted'] = 'blog';
 
-		$this->load->view('pages/admin/news', $this->data);
+		$this->load->view('pages/admin/blog', $this->data);
 	}
 
 	public function Post($id) {
@@ -120,6 +120,30 @@ class Admin extends MY_Controller {
 		$this->view('pages/admin/project');
 	}
 
+	public function news() {
+
+		$this->data['type'] = $type = 'News_post';
+
+		$this->modify($type);
+
+		$this->data['items'] = $this->get_items('News_post');
+		$this->data['highlighted'] = 'news';
+
+		$this->view('pages/admin/news');
+	}
+
+	public function News_post($id) {
+
+		$this->data['type'] = $type = 'News_post';
+
+		$this->modify($type);
+
+		$this->data['item'] = $this->get_item($type, $id);
+		$this->data['highlighted'] = 'news';
+
+		$this->view('pages/admin/news_post');
+	}
+
 	public function user() {
 
 		$type = 'User';
@@ -158,7 +182,7 @@ class Admin extends MY_Controller {
 	public function add($type, $data) {
 
 		$allowed = [
-			'Post', 'Project',
+			'Post', 'Project', 'News_post',
 		];
 
 		if(!$this->is_allowed($allowed, $type)) {
@@ -185,7 +209,7 @@ class Admin extends MY_Controller {
 	public function edit($type, $data) {
 
 		$allowed = [
-			'Page', 'Post', 'User', 'Project',
+			'Page', 'Post', 'User', 'Project', 'News_post',
 		];
 
 		if(!$this->is_allowed($allowed, $type)) {
@@ -212,7 +236,7 @@ class Admin extends MY_Controller {
 	public function delete($type, $id) {
 
 		$allowed = [
-			'Post', 'Post_image', 'Project', 'Project_image',
+			'Post', 'Post_image', 'Project', 'Project_image', 'News_post',
 		];
 
 		if(!$this->is_allowed($allowed, $type)) {

@@ -11,6 +11,7 @@ class Site extends MY_Controller {
 		$this->load->helper('no_image');
 		
 		$this->data['navigation'] = $this->get_navigation();
+		$this->data['news'] = $this->get_news();
 	}
 
 	public function index() {
@@ -107,6 +108,11 @@ class Site extends MY_Controller {
 	private function get_navigation() {
 		$this->load->model('Page');
 		return $this->Page->get_navigation();
+	}
+
+	private function get_news() {
+		$this->load->model('News_post');
+		return $this->News_post->get_localized(2);
 	}
 
 }

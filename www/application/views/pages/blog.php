@@ -15,7 +15,8 @@
 				<div class="row post">
 					<div class="col-sm-4 col-sm-offset-1 image-col">
 						<a href="<?php echo locale_url("post/{$p->id}/{$p->slug}"); ?>">
-							<img src="<?php echo static_url("uploads/posts/thumbs/{$p->image}"); ?>" alt="<?php echo $p->title; ?>">
+							<?php $img = image_exists($p->image, 'static/uploads/posts/thumbs/'); ?>
+							<img src="<?php echo $img; ?>" alt="<?php echo $p->title; ?>">
 						</a>
 					</div>
 					<div class="col-sm-7">

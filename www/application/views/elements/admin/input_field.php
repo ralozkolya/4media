@@ -13,7 +13,7 @@
 		<?php echo lang($name, $name); ?>
 		<textarea class="form-control"
 			name="<?php echo $name; ?>"
-			id="<?php echo $id; ?>"><?php echo $value; ?></textarea>
+			id="<?php echo $name; ?>"><?php echo $value; ?></textarea>
 	</div>
 <?php elseif($type === 'ckeditor'): ?>
 	<div class="form-group">
