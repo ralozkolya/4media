@@ -42,7 +42,7 @@ img {
 	background-repeat: no-repeat;
 
 	&.city {
-		background-image: url('../img/city.jpg');
+		background-image: url('../img/bg.png');
 		color: white;
 	}
 }
@@ -63,8 +63,8 @@ img {
 
 	.sidebar {
 		padding: 20px;
-		background: url('../img/city.jpg');
-		background-position: bottom left;
+		background: url('../img/bg.png');
+		background-position: top left;
 		background-size: cover;
 
 		@media (min-width: $sm) {
@@ -94,7 +94,7 @@ img {
 			bottom: 0;
 
 			@media (min-width: $sm) {
-				height: calc(100vh - 200px);
+				height: calc(100vh - 250px);
 			}
 		} 
 	}
