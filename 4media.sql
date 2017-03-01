@@ -26,6 +26,18 @@ CREATE TABLE IF NOT EXISTS `admins` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
+-- Dumping structure for table 4media.news
+CREATE TABLE IF NOT EXISTS `news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ka_desc` varchar(512) NOT NULL,
+  `en_desc` varchar(512) NOT NULL,
+  `image` varchar(512) NOT NULL,
+  `link` varchar(512) NOT NULL,
+  `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+-- Data exporting was unselected.
 -- Dumping structure for table 4media.pages
 CREATE TABLE IF NOT EXISTS `pages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -42,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `pages` (
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `slug` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table 4media.posts
@@ -57,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `slug` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table 4media.projects
@@ -65,8 +77,6 @@ CREATE TABLE IF NOT EXISTS `projects` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `ka_name` varchar(512) NOT NULL,
   `en_name` varchar(512) NOT NULL,
-  `ka_desc` text NOT NULL,
-  `en_desc` text NOT NULL,
   `type` varchar(512) NOT NULL,
   `link` varchar(512) NOT NULL,
   `image` varchar(512) NOT NULL,
@@ -74,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `projects` (
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `priority` (`priority`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
