@@ -20,6 +20,7 @@
 	<?php } ?>
 
 	<link rel="stylesheet" href="<?php echo static_url('css/blog.css?v='.V) ?>">
+	<script src="<?php echo static_url('js/post.js?v='.V); ?>"></script>
 </head>
 <body>
 	<div id="fb-root"></div>
