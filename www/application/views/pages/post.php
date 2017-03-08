@@ -82,7 +82,7 @@
 			</div>
 			<div class="text-center">
 				<div>
-					<a href="<?php echo $this->agent->referrer(); ?>" class="btn btn-primary btn-lg"><?php echo lang('back'); ?></a>
+					<a href="<?php echo locale_url('blog'); ?>" class="btn btn-primary btn-lg"><?php echo lang('back'); ?></a>
 				</div>
 				<br>
 				<br>
