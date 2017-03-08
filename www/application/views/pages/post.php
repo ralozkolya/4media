@@ -27,33 +27,60 @@
 	<?php $this->load->view('elements/menu'); ?>
 	<div class="wrapper">
 		<div class="container single-post">
-			<h1 class="light-green text-center"><?php echo $post->title; ?></h1>
-			<?php if(!empty($post->image)) { ?>
+			<div class="bordered">
+				<h1 class="light-green text-center"><?php echo $post->title; ?></h1>
+				<?php if(!empty($post->image)) { ?>
+					<div class="row">
+						<div class="col-xs-12 text-center">
+							<img src="<?php echo $image_url; ?>"
+								alt="<?php echo $post->title; ?>">
+						</div>
+					</div>
+					<br>
+				<?php } ?>
 				<div class="row">
-					<div class="col-xs-12 text-center">
-						<img src="<?php echo $image_url; ?>"
-							alt="<?php echo $post->title; ?>">
+					<div class="col-xs-6 text-right">
+						<h3 class="date"><strong><?php echo date('d/m/Y', strtotime($post->modified)); ?></strong></h3>
+					</div>
+					<div class="col-xs-6">
+						<div class="fb-like" data-layout="button" data-action="like" data-size="large"
+							data-show-faces="true" data-share="true"></div>
 					</div>
 				</div>
-				<br>
-			<?php } ?>
-			<div class="row">
-				<div class="col-xs-6 text-right">
-					<h3 class="date"><?php echo date('d/m/Y', strtotime($post->modified)); ?></h3>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="body"><?php echo $post->body; ?></div>
+					</div>
 				</div>
-				<div class="col-xs-6">
-					<div class="fb-like" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+				<div class="text-right">
+					<div class="fb-like" data-layout="button" data-action="like" data-size="large"
+						data-show-faces="true" data-share="true"></div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="body"><?php echo $post->body; ?></div>
+			<div class="bordered">
+				<div class="container-fluid">
+					<h3 class="light-green"><?php echo lang('similar_posts'); ?></h3>
+					<br>
+					<div class="row text-center">
+						<?php foreach($posts as $i => $p) { ?>
+							<a href="<?php echo locale_url("post/{$p->id}/{$p->slug}"); ?>" class="unstyled">
+								<div class="col-sm-4 col-md-3 post">
+									<?php $url = image_exists($p->image, 'static/uploads/posts/thumbs/'); ?>
+									<div class="image"
+										style="background-image: url('<?php echo $url; ?>');"></div>
+									<br>
+									<div><?php echo $p->title; ?></div>
+								</div>
+							</a>
+							<?php if($i > 2) break; ?>
+						<?php } ?>
+					</div>
 				</div>
+			</div>
+			<div class="bordered">
+				<div class="fb-comments" data-width="100%" data-numposts="5"></div>
 			</div>
 			<div class="text-center">
-				
-				<br>
-				<br>
 				<div>
 					<a href="<?php echo $this->agent->referrer(); ?>" class="btn btn-primary btn-lg"><?php echo lang('back'); ?></a>
 				</div>
@@ -67,7 +94,7 @@
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=1533521776920889";
+	  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
 	</script>

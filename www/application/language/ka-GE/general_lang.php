@@ -33,3 +33,4 @@ $lang['message'] = 'წერილი';
 $lang['send'] = 'გაგზავნა';
 
 $lang['back'] = 'უკან';
+$lang['similar_posts'] = 'მსგავსი სიახლეები';

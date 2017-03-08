@@ -33,3 +33,4 @@ $lang['message'] = 'Message';
 $lang['send'] = 'Send';
 
 $lang['back'] = 'Back';
+$lang['similar_posts'] = 'Similar posts';

@@ -1,10 +1,14 @@
 @import 'partials/variables';
 @import 'partials/fonts';
 
+body {
+	background: #ecf0f1;
+}
+
 .single-post {
-	margin-top: 40px;
 
 	h1.light-green {
+		margin-top: 0;
 		margin-bottom: 40px;
 	}
 }
@@ -24,6 +28,13 @@ h3.date {
 .post {
 	margin-bottom: 40px;
 
+	> .image {
+		padding-top: 60%;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
 	@media (min-width: $sm) {
 		.list-header {
 			margin-top: 0;
@@ -41,4 +52,21 @@ h3.date {
 	@include noto();
 	text-transform: none;
 	font-weight: normal;
+}
+
+.bordered {
+	padding: 40px 0;
+	margin-bottom: 40px;
+	border-bottom: 1px solid $light-green;
+
+	&:first-child {
+		border-top: none;
+	}
+
+	@media(min-width: $sm) {
+		margin: 0 60px 40px 60px;
+		padding: 40px;
+		background: white;
+		border: 1px solid $light-green;
+	}
 }

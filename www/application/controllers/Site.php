@@ -49,7 +49,10 @@ class Site extends MY_Controller {
 
 	public function post($id, $slug) {
 
+		$posts = $this->get_posts(1);
+
 		$this->data['post'] = $this->get_post($id);
+		$this->data['posts'] = $posts['data'];
 		$this->data['title'] = $this->data['post']->title . ' | ' . $this->data['title'];
 
 		$this->view('pages/post', $this->data);
