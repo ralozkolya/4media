@@ -22,8 +22,8 @@ $lang['our_team'] = 'Our team';
 $lang['portfolio'] = 'Portfolio';
 $lang['what_are_you_waiting_for'] = 'What are you waiting for';
 
-$lang['address'] = '#7 Dadiani , 0101 Tbilisi';
-$lang['phone'] = '+995 577 01 34 20, +995 595 48 32 16';
+$lang['address'] = 'Chikovani #11, Tbilisi 0177';
+$lang['phone'] = '+995 577 04 34 20, +995 593 00 77 17';
 $lang['for_more_contact'] = 'More ways to connect';
 
 $lang['name'] = 'Name';

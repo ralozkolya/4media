@@ -85,7 +85,7 @@
 		<div class="contact-logo">
 			<img src="<?php echo static_url('img/logo_contact.png'); ?>" alt="Logo">
 		</div>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1489.0317590074542!2d44.80144315865896!3d41.71914819870219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440d322a6fe587%3A0x624fd30a69fa079!2s7+Tsotne+Dadiani+St%2C+Tbilisi!5e0!3m2!1sen!2sge!4v1486853535815" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.5145554166083!2d44.750522315436505!3d41.73099297923413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404472cba6dc8e73%3A0xc4dfbd615f1650db!2s4MEDIA!5e0!3m2!1ska!2sge!4v1489146190513" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 		<div class="map-overlay"></div>
 	</div>
 </div>

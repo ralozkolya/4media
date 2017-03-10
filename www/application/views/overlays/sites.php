@@ -15,13 +15,15 @@
 			<div class="col-sm-5 col-sm-offset-1">
 				<?php echo $sites->body; ?>
 			</div>
-			<div class="col-sm-5 col-sm-offset-1">
+			<div class="col-sm-4 col-sm-offset-1">
 				<div>
 					<?php if(!empty($projects)) { ?>
 						<?php $p = $projects[0]; ?>
 						<div class="overlay-project" data-type="<?php echo $p->type; ?>">
-							<img src="<?php echo static_url("uploads/projects/{$p->image}"); ?>"
-								alt="<?php echo $p->name; ?>">
+							<a href="<?php echo $p->link; ?>" class="unstyled" target="_blank">
+								<div class="image"
+									style="background-image: url('<?php echo static_url("uploads/projects/{$p->image}"); ?>');"></div>
+							</a>
 						</div>
 					<?php } ?>
 				</div>

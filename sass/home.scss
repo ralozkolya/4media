@@ -152,4 +152,16 @@ body {
 
 .overlay-project {
 	margin-bottom: 20px;
+
+	.image {
+		padding-top: 60%;
+		background-size: cover;
+		background-position: center;
+	}
+}
+
+.type-button {
+	@media (max-width: 459px) {
+		width: calc(100% - 60px);
+	}
 }

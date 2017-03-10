@@ -22,8 +22,8 @@ $lang['our_team'] = 'ჩვენი გუნდი';
 $lang['portfolio'] = 'პორტფოლიო';
 $lang['what_are_you_waiting_for'] = 'რაღას ელოდები';
 
-$lang['address'] = 'ც. დადიანის #7, 0101 თბილისი';
-$lang['phone'] = '+995 577 01 34 20, +995 595 48 32 16';
+$lang['address'] = 'ჩიქოვანის ქ. #11, თბილისი 0177';
+$lang['phone'] = '+995 577 04 34 20, +995 593 00 77 17';
 $lang['for_more_contact'] = 'მეტი კავშირისთვის';
 
 $lang['name'] = 'სახელი';
