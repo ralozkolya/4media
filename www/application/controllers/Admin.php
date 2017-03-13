@@ -3,6 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends MY_Controller {
 
+	private $types = [
+		WEBSITES, APPS, LOGOS, OTHER,
+	];
+
 	public function __construct() {
 		parent::__construct();
 
@@ -87,7 +91,7 @@ class Admin extends MY_Controller {
 	public function projects($page = 1) {
 
 		$this->data['type'] = $type = 'Project';
-		$this->data['types'] = TYPES;
+		$this->data['types'] = $this->types;
 
 		$this->modify($type);
 
@@ -110,7 +114,7 @@ class Admin extends MY_Controller {
 	public function Project($id) {
 
 		$this->data['type'] = $type = 'Project';
-		$this->data['types'] = TYPES;
+		$this->data['types'] = $this->types;
 
 		$this->modify($type);
 

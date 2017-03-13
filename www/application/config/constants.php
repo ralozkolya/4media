@@ -109,6 +109,7 @@ define('ERROR', 'error_message');
 define('NO_REPLY', 'nikoloz@indiestudio.ge');
 define('INFO_MAIL', 'nikoloz@indiestudio.ge');
 
-define('TYPES', [
-	'websites', 'apps', 'logos', 'other',
-]);
+define('WEBSITES', 'websites');
+define('APPS', 'apps');
+define('LOGOS', 'logos');
+define('OTHER', 'other');
