@@ -1,5 +1,5 @@
 <div class="header-section">
-	<h2 class="light-green"><?php echo lang('portfolio'); ?></h2>
+	<h2 class="light-green"><?php echo $portfolio->title; ?></h2>
 </div>
 <br>
 <div class="text-center">

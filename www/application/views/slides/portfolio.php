@@ -1,6 +1,6 @@
 <div class="slide city" id="portfolio">
 	<div class="header-section">
-		<h2><?php echo lang('portfolio'); ?></h2>
+		<h2><?php echo $portfolio->title; ?></h2>
 		<br>
 		<div>
 			<button class="gradient-button type-button active" data-type="all"><?php echo lang('all'); ?></button>

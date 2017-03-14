@@ -25,6 +25,7 @@ class Site extends MY_Controller {
 		$this->data['other'] = $this->get_page('looking-for-other');
 		$this->data['more'] = $this->get_page('more-about-us');
 		$this->data['sense'] = $this->get_page('sense');
+		$this->data['portfolio'] = $this->get_page('portfolio');
 
 		$this->view('pages/home');
 	}

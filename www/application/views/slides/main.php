@@ -7,23 +7,23 @@
 	<div class="text-center">
 		<a href="#" class="unstyled open-overlay" data-opens=".sites">
 			<div class="section-button make-sites">
-				<div class="name"><?php echo lang('make_sites'); ?></div>
+				<div class="name"><?php echo $sites->title; ?></div>
 			</div>
 		</a>
 		<a href="#" class="unstyled open-overlay" data-opens=".social_media">
 			<div class="section-button social-media">
-				<div class="name"><?php echo lang('social_media'); ?></div>
+				<div class="name"><?php echo $social_media->title; ?></div>
 			</div>
 		</a>
 		<a href="#" class="unstyled open-overlay" data-opens=".more_about_us">
 			<div class="section-button about-us">
-				<div class="name"><?php echo lang('about_us'); ?></div>
+				<div class="name"><?php echo $more->title; ?></div>
 			</div>
 		</a>
 		<br class="hidden-xs">
 		<a href="#" class="unstyled open-overlay" data-opens=".sense">
 			<div class="section-button google">
-				<div class="name"><?php echo lang('adwords'); ?></div>
+				<div class="name"><?php echo $sense->title; ?></div>
 			</div>
 		</a>
 		<a href="<?php echo locale_url('blog'); ?>" class="unstyled">
@@ -33,7 +33,7 @@
 		</a>
 		<a href="#" class="unstyled open-overlay" data-opens=".other">
 			<div class="section-button searching-for-other">
-				<div class="name"><?php echo lang('searching_for_other'); ?></div>
+				<div class="name"><?php echo $other->title; ?></div>
 			</div>
 		</a>
 	</div>

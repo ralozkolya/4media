@@ -1,5 +1,5 @@
 <div class="header-section">
-	<h2 class="light-green"><?php echo lang('adwords'); ?></h2>
+	<h2 class="light-green"><?php echo $sense->title; ?></h2>
 	<br>
 	<?php if(!empty($sense->image)) { ?>
 		<img
