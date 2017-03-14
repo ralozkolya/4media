@@ -31,3 +31,4 @@ www/static/css
 www/static/uploads
 www/.htaccess
 log
+sftp-config.json
