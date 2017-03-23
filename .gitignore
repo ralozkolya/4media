@@ -29,6 +29,6 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 .sass-cache
 www/static/css
 www/static/uploads
-www/.htaccess
+www/.htaccess*
 log
 sftp-config.json
