@@ -46,21 +46,21 @@
 										class="form-control"
 										type="text"
 										name="name"
-										placeholder="<?php echo lang('name'); ?>">
+										placeholder="<?php echo lang('name'); ?>" required>
 								</div>
 								<div class="form-group">
 									<input
 										class="form-control"
 										type="email"
 										name="email"
-										placeholder="<?php echo lang('email'); ?>">
+										placeholder="<?php echo lang('email'); ?>" required>
 								</div>
 								<div class="form-group">
 									<input
 										class="form-control"
 										type="text"
 										name="subject"
-										placeholder="<?php echo lang('subject'); ?>">
+										placeholder="<?php echo lang('subject'); ?>" required>
 								</div>
 							</div>
 							<div class="col-sm-6">
@@ -68,7 +68,7 @@
 									<textarea
 										class="form-control"
 										name="message"
-										placeholder="<?php echo lang('message'); ?>"></textarea>
+										placeholder="<?php echo lang('message'); ?>" required></textarea>
 								</div>
 								<div class="form-group">
 									<input type="submit" class="btn btn-block btn-primary"

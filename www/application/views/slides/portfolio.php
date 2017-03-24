@@ -17,7 +17,7 @@
 				<?php $url = $p->link ? $p->link : '#'; ?>
 				<a class="unstyled" href="<?php echo $url; ?>" target="_blank">
 					<div class="image"
-						style="background-image: url('<?php echo static_url("uploads/projects/thumbs/{$p->image}"); ?>');"></div>
+						style="background-image: url('<?php echo static_url("uploads/projects/{$p->image}"); ?>');"></div>
 				</a>
 			</div>
 		<?php } ?>

@@ -89,7 +89,7 @@ define('EN', 'en-US');
 define('GE', 'ka-GE');
 define('RU', 'ru-RU');
 
-define('V', 10);
+define('V', 11);
 
 $secure = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443;
 $protocol = $secure ? 'https://' : 'http://';
@@ -107,7 +107,7 @@ define('SUCCESS', 'success_message');
 define('ERROR', 'error_message');
 
 define('NO_REPLY', 'nikoloz@indiestudio.ge');
-define('INFO_MAIL', 'nikoloz@indiestudio.ge');
+define('INFO_MAIL', 'raloz1@gmail.com');
 
 define('WEBSITES', 'websites');
 define('APPS', 'apps');
