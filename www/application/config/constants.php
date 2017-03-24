@@ -107,7 +107,7 @@ define('SUCCESS', 'success_message');
 define('ERROR', 'error_message');
 
 define('NO_REPLY', 'nikoloz@indiestudio.ge');
-define('INFO_MAIL', 'raloz1@gmail.com');
+define('INFO_MAIL', 'info@4media.ge');
 
 define('WEBSITES', 'websites');
 define('APPS', 'apps');
