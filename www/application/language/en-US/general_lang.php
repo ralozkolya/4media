@@ -31,6 +31,8 @@ $lang['email'] = 'Email';
 $lang['subject'] = 'Subject';
 $lang['message'] = 'Message';
 $lang['send'] = 'Send';
+$lang['sending'] = 'Sending...';
+$lang['sent'] = 'Sent!';
 
 $lang['back'] = 'Back';
 $lang['similar_posts'] = 'Similar posts';

@@ -38,7 +38,7 @@
 					</div>
 				</div>
 				<div class="col-sm-7">
-					<form method="post" class="message-form">
+					<form method="post" action="<?php echo locale_url('send_mail'); ?>" class="message-form">
 						<div class="row">
 							<div class="col-sm-6">
 								<div class="form-group">

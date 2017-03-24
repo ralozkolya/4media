@@ -31,6 +31,8 @@ $lang['email'] = 'იმეილი';
 $lang['subject'] = 'სათაური';
 $lang['message'] = 'წერილი';
 $lang['send'] = 'გაგზავნა';
+$lang['sending'] = 'იგზავნება...';
+$lang['sent'] = 'გაიგზავნა!';
 
 $lang['back'] = 'უკან';
 $lang['similar_posts'] = 'მსგავსი სიახლეები';

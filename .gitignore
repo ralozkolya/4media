@@ -32,3 +32,4 @@ www/static/uploads
 www/.htaccess*
 log
 sftp-config.json
+www/application/vendor

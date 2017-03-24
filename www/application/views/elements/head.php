@@ -9,6 +9,22 @@
 
 <link rel="icon" type="image/png" href="<?php echo static_url('img/favicon.png'); ?>">
 
+<script>
+	
+var URL = {
+	base: '<?php echo base_url(); ?>',
+	locale: '<?php echo locale_url(); ?>',
+	static: '<?php echo static_url(); ?>',
+};
+
+var LANG = {
+	send: '<?php echo lang('send'); ?>',
+	sending: '<?php echo lang('sending'); ?>',
+	sent: '<?php echo lang('sent'); ?>',
+};
+
+</script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="<?php echo static_url('js/general.js?v='.V); ?>"></script>

@@ -59,6 +59,19 @@ class Site extends MY_Controller {
 		$this->view('pages/post', $this->data);
 	}
 
+	public function send_mail() {
+
+		if($this->input->post()) {
+
+			$this->load->helper(['email_sender', 'purifier']);
+			$this->load->library('form_validation');
+
+			if($this->form_validation->run('send_mail')) {
+				send_message($this->input->post());
+			}
+		}
+	}
+
 
 	/*	PULLERS	*/
 
