@@ -83,7 +83,7 @@ class Admin extends MY_Controller {
 		$this->modify($type);
 
 		$this->data['item'] = $this->get_item($type, $id);
-		$this->data['highlighted'] = 'news';
+		$this->data['highlighted'] = 'blog';
 
 		$this->load->view('pages/admin/post', $this->data);
 	}
