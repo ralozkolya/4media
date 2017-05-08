@@ -66,7 +66,7 @@ class Admin extends MY_Controller {
 
 		$this->config->load('pagination');
 		$config = $this->config->item('pagination');
-		$config['base_url'] = base_url('admin/news');
+		$config['base_url'] = base_url('admin/blog');
 		$config['per_page'] = ITEMS_PER_PAGE_ADMIN;
 		$config['total_rows'] = $posts['rows'];
 		$this->load->library('pagination', $config);
