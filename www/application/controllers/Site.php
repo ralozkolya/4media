@@ -16,6 +16,8 @@ class Site extends MY_Controller {
 
 	public function index() {
 
+		//restore_language();
+
 		$this->data['project_types'] = $this->get_project_types();
 		$this->data['projects'] = $this->get_projects();
 		$this->data['menu'] = 'relative';
@@ -31,6 +33,8 @@ class Site extends MY_Controller {
 	}
 
 	public function blog($page = 1) {
+
+		//force_language(GE);
 
 		$posts = $this->get_posts($page);
 
@@ -49,6 +53,8 @@ class Site extends MY_Controller {
 	}
 
 	public function post($id, $slug) {
+
+		//force_language(GE);
 
 		$posts = $this->get_posts(1);
 

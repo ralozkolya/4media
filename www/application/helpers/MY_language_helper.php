@@ -94,3 +94,30 @@ function get_lang_code($lang) {
 		case GE: return 'ka';
 	}
 }
+
+function force_language($lang) {
+
+	$to = $lang === GE ? GE : EN;
+	$from = $to === GE ? EN : GE;
+	$url = current_url();
+
+	if(strpos($url, $from)) {
+		$ci =& get_instance();
+		$ci->session->set_userdata('PREV_LANG', $from);
+		redirect(str_replace($from, $to, $url));
+	}
+}
+
+function restore_language() {
+	$ci =& get_instance();
+	$prev_lang = $ci->session->userdata('PREV_LANG');
+	$ci->session->unset_userdata('PREV_LANG');
+
+	$to = $prev_lang;
+	$from = $to === GE ? EN : GE;
+	$url = current_url();
+
+	if(strpos($url, $from)) {
+		redirect(str_replace($from, $to, $url));
+	}
+}
