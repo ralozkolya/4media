@@ -78,7 +78,11 @@
 				</div>
 			</div>
 			<div class="bordered">
-				<div class="fb-comments" data-width="100%" data-numposts="5"></div>
+				<?php
+					$comments_url = locale_url("post/{$post->id}");
+				?>
+				<div class="fb-comments" data-width="100%" data-numposts="5"
+					data-href="<?php echo $comments_url; ?>"></div>
 			</div>
 			<div class="text-center">
 				<div>
