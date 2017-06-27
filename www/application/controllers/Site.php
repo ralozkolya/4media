@@ -78,6 +78,13 @@ class Site extends MY_Controller {
 		}
 	}
 
+	public function sitemap() {
+		$this->output->set_header('Content-Type: text/xml');
+		$this->load->model('Post');
+		$this->data['posts'] = $this->Post->get_list();
+		$this->load->view('xml/sitemap', $this->data);
+	}
+
 
 	/*	PULLERS	*/
 

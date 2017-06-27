@@ -53,6 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $lang = '('.GE.'|'.EN.')';
 
+$route['sitemap.xml'] = 'site/sitemap';
 $route[$lang] = 'site';
 $route[$lang.'/(:any)'] = 'site/$2';
 
