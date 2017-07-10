@@ -29,7 +29,7 @@
 								<span class="fa fa-twitter"></span>
 							</div>
 						</a>
-						<a class="unstyled" target="_blank" href="#">
+						<a class="unstyled" target="_blank" href="https://www.instagram.com/4media.ge/">
 							<div class="social">
 								<span class="fa fa-instagram"></span>
 							</div>
