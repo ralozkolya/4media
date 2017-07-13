@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="iVz2l0Y3zuon8dczPy8tQwRLckmAr4hgNn5_t_lVGZU">
 
 <title><?php echo $title; ?></title>
 
