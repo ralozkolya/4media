@@ -23,7 +23,7 @@ $lang['portfolio'] = 'პორტფოლიო';
 $lang['what_are_you_waiting_for'] = 'რაღას ელოდები';
 
 $lang['address'] = 'ჩიქოვანის ქ. #11, თბილისი 0177';
-$lang['phone'] = '+995 577 04 34 20, +995 593 00 77 17';
+$lang['phone'] = '+995 577 04 34 20, +995 593 007 717';
 $lang['for_more_contact'] = 'მეტი კავშირისთვის';
 
 $lang['name'] = 'სახელი';
